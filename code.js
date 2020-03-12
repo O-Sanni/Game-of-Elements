@@ -77,17 +77,17 @@ function randomPages(){
 function battle(user){
     if (userScore===5){
         winner="user";
-        return;
+        
     }
     else if(computerScore===5){
         winner = "computer";
-        return;
+       
     }
     else{
         const computerChoice=computerChoiceOfElements[Math.floor(Math.random()*4)];
         const userChoice=user;
         console.log("Computer Choice " + computerChoice);
-        console.log("User choice "+userChoice);
+        console.log("User choice "+ userChoice);
 
         if(userChoice==="Wind"){
             if (userChoice==="Wind" && computerChoice==="Water"){
@@ -103,7 +103,7 @@ function battle(user){
                 userScore+=1;
             }
             else if(userChoice === "Fire" && computerChoice==="Water"){
-                computerChoice+=1;
+                computerScore+=1;
             }
         }
         else if(userChoice==="Earth"){
@@ -116,7 +116,7 @@ function battle(user){
         }
         else if (userChoice==="Water"){
             if(userChoice==="Water" && computerChoice==="Fire"){
-                userChoice+=1;
+                userScore+=1;
             }
             else if(userChoice==="Water" && computerChoice==="Wind"){
                 computerScore+=1;
@@ -124,10 +124,16 @@ function battle(user){
             else if(userChoice==="Water" && computerChoice==="Earth"){
                 computerScore+=1;
             }
-            else{
+        }
+        else{
                 console.log("No winner");
             }
-        }
+
     }
+    console.log("Computer "+computerScore);
+    console.log("User "+userScore);
 }
-console.log(battle("Fire"));
+while (winner===""){
+battle("Wind");
+}
+console.log(winner);

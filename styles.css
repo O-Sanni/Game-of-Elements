@@ -1,0 +1,29 @@
+body{
+    background-image: url("/background.jpg");
+    background-size: cover;
+}
+#storyandRulesDiv{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+background-image: url("/paper-3653357_1920-removebg-preview.png");
+background-repeat: no-repeat;
+background-size: 100%;
+width: 1000px;
+height: 800px;
+opacity: 1;
+}
+#mainContainer{
+display: flex;
+flex-wrap: wrap;
+flex-direction: column;
+align-content: center;
+text-align: center;
+}
+#rules{
+padding: 55px;
+}
+#elements{
+width: 350px;
+height: 300px;
+}
