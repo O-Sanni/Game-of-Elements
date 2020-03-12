@@ -7,7 +7,9 @@ class Inventions{
     }
 }
 let arrayOfInventions=[];
+const computerChoiceOfElements=["Water", "Wind","Water", "Fire"];
 
+ function createInventionPages(){
 const wheel=new Inventions ("Wheel","assets/wheel.jpg","The wheel stands out as the OG of engineering marvels and one of the most famous inventions that influenced numerous other things. This primitive technology made it easier for all of us to travel. From the archeological excavations, the oldest known wheel is from Mesopotamia, around 3500 B.C. As a result of advancement in the new and innovative design of wheels, industrialization could take root.The wheel serves a vital purpose in our lives, and we couldn't imagine the world without them.");
 arrayOfInventions.push(wheel);
 const compass=new Inventions ("Compass", "Created for spiritual and navigational purposes, the earliest compasses were most likely invented by the Chinese in around 1050 BC. It was made of lodestones, which is a naturally magnetized iron ore.The invention of the electromagnet in 1825 led to the development of the modern compass.The invention of the compass certainly helped modern navigation more than our GPS-needing culture could understand.");
@@ -38,19 +40,40 @@ const computer=new Inventions ("Computer", "assets/coputer.jpg", "Major shoutout
 arrayOfInventions.push(computer);
 const steel=new Inventions ("Steel", "assets/steel.jpg","While the early ages used stone, bronze, and iron, it was steel that fired the industrial revolution. As per archaeological excavations, the earliest known production of the metal dates back to 4,000 years. The invention of the Bessemer Process (a technique for creating steel using molten pig iron) paved the way for the mass production of steel, making it one of the biggest industries on the planet. Now steel is used in the creation of everything from bridges to skyscrapers.")
 arrayOfInventions.push(steel);
-
-console.log(arrayOfInventions);
-
-function getRandomNUmber1_3(){
-let randomNumber= Math.floor((Math.random()*3) +1); 
-}
-function randomPages(){
-
- let stolenpages=[];
- for(let i=0;i<3;i++)
- {
-     stole
  }
- console.log()
+createInventionPages();
+
+function getRandomNumber1_15(){
+let randomNumber= Math.floor(Math.random()*15);
+console.log(randomNumber);
+return randomNumber;
+}
+
+function randomPages(){
+ let randomPageNumber1=getRandomNumber1_15();
+ let randomPageNumber2=getRandomNumber1_15();
+ let randomPageNumber3=getRandomNumber1_15();
+ console.log(`${randomPageNumber1}; ${randomPageNumber2}; ${randomPageNumber3} `)
+ let stolenpages=[];
+ if (randomPageNumber1 === randomPageNumber2 || randomPageNumber2===randomPageNumber3 || randomPageNumber1===randomPageNumber3)
+ {
+    randomPages();
+ }
+ else{
+     stolenpages.push(arrayOfInventions[randomPageNumber1]);
+     stolenpages.push(arrayOfInventions[randomPageNumber2]);
+     stolenpages.push(arrayOfInventions[randomPageNumber3]);
+ }
+ 
+ console.log(stolenpages);
+ console.log(stolenpages.length);
+ return stolenpages;
+}
+
+function battle(userChoice){
+const computerChoice=computerChoiceOfElements[Math.floor(Math.random()*4)];
+console.log(computerChoice);
+
 
 }
+battle();
