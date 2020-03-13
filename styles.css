@@ -3,14 +3,14 @@ body{
     background-size: cover;
 }
 #gamePageBody{
-background-image: url("/");
+background-image: url("/background.png");
 }
 #storyandRulesDiv{
     display: flex;
     flex-direction: column;
     text-align: center;
 background-image: url("/pageMain-removebg-preview.png");
-/* background-repeat: no-repeat; */
+background-repeat: no-repeat;
 background-size: cover;
 width: 700px;
 height: 800px;
@@ -44,4 +44,11 @@ margin-bottom: 300px;
 #rabbitMainImg{
     width: 200px;
     height: auto;
+}
+
+.elementsImg{
+    border-radius: 50%;
+
+    width:100px;
+    height: 100px;
 }
