@@ -7,9 +7,9 @@ body{
     flex-direction: column;
     text-align: center;
 background-image: url("/paper-3653357_1920-removebg-preview.png");
-background-repeat: no-repeat;
-background-size: 100%;
-width: 1000px;
+/* background-repeat: no-repeat; */
+background-size: cover;
+width: 700px;
 height: 800px;
 opacity: 1;
 }
@@ -21,9 +21,24 @@ align-content: center;
 text-align: center;
 }
 #rules{
-padding: 55px;
+padding: 70px;
+text-align: center;
 }
 #elements{
 width: 350px;
 height: 300px;
+margin-bottom: 300px;
+}
+#middleMainDiv{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+#dragonMainImg{
+    width: 300px;
+    height: auto;
+}
+#rabbitMainImg{
+    width: 200px;
+    height: auto;
 }
