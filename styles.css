@@ -2,9 +2,7 @@ body{
     background-image: url("/background.jpg");
     background-size: cover;
 }
-#gamePageBody{
-background-image: url("/background.png");
-}
+
 #storyandRulesDiv{
     display: flex;
     flex-direction: column;
@@ -46,6 +44,11 @@ margin-bottom: 300px;
     height: auto;
 }
 
+/* Styles for Game page */
+#gamePageBody{
+background-image: url("/background.png");
+}
+
 .elementsImg{
     border-radius: 50%;
     width:100px;
@@ -53,7 +56,7 @@ margin-bottom: 300px;
     margin-left:135px;
     margin-top: 40px;
 }
-#elements{
+#elementsUser{
     display: grid;
     grid-template-columns: 85px 85px;
     grid-template-rows: 90px 90px;
@@ -61,5 +64,18 @@ margin-bottom: 300px;
     background-size: 100%;
     width: 400px;
     height: 300px;
-     
+    border: solid 5px green;
+}
+#userScoreDiv{
+    border: solid 5px red;
+}
+#elementsDragon{
+display: grid;
+grid-template-columns: 85px 85px;
+grid-template-rows: 90px 90px;
+background-image: url("/game/elementsframe.png");
+background-size: 100%;
+width: 400px;
+height: 300px;
+border: solid 5px green;
 }
