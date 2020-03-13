@@ -2,11 +2,14 @@ body{
     background-image: url("/background.jpg");
     background-size: cover;
 }
+#gamePageBody{
+background-image: url("/");
+}
 #storyandRulesDiv{
     display: flex;
     flex-direction: column;
     text-align: center;
-background-image: url("/paper-3653357_1920-removebg-preview.png");
+background-image: url("/pageMain-removebg-preview.png");
 /* background-repeat: no-repeat; */
 background-size: cover;
 width: 700px;
