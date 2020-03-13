@@ -48,10 +48,18 @@ margin-bottom: 300px;
 
 .elementsImg{
     border-radius: 50%;
-
     width:100px;
     height: 100px;
+    margin-left:135px;
+    margin-top: 40px;
 }
-/* #fireButton{
-    background-color: crimson;
-} */
+#elements{
+    display: grid;
+    grid-template-columns: 85px 85px;
+    grid-template-rows: 90px 90px;
+    background-image: url("/game/elementsframe.png");
+    background-size: 100%;
+    width: 400px;
+    height: 300px;
+     
+}
