@@ -1,3 +1,4 @@
+/* Styles for main page */
 body{
     background-image: url("/background.jpg");
     background-size: cover;
@@ -101,3 +102,13 @@ border: solid 5px blue;
 width: 100px;
 height: 100px;
 }
+#stolenPage{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-image: url("/stolenPage.png");
+    background-size: cover;
+    width: 1500px;
+    height: 1100px;
+}
+
