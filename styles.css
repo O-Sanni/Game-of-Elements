@@ -48,6 +48,8 @@ margin-bottom: 300px;
 /* Styles for Game page */
 #gamePageBody{
 background-image: url("/background.png");
+width: 1500px;
+height: 1500px;
 }
 
 #gamePageTopDiv{
@@ -71,15 +73,17 @@ background-image: url("/background.png");
     background-size: 100%;
     width: 400px;
     height: 300px;
-    border: solid 5px green;
+
 }
 #userPages{
-    border: solid 5px blue;
+    background-image: url("/pagesFrame.png");
+    margin-left: 50px;
+    background-size: cover;
     width: 100px;
     height: 100px;  
 }
 #userSide{
-    border: solid 5px orange;
+
     width: 450px;
 }
 
@@ -91,14 +95,15 @@ background-image: url("/game/elementsframe.png");
 background-size: 100%;
 width: 400px;
 height: 300px;
-border: solid 5px green;
 }
 #dragonSide{
-border: solid 5px orange;
 width: 450px;
 }
 #dragonPages{
-border: solid 5px blue;
+    background-image: url("/pagesFrame.png");
+    margin-left: 50px;
+    background-size: cover;
+
 width: 100px;
 height: 100px;
 }
