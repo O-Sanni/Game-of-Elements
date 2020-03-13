@@ -5,26 +5,39 @@
      <title>Game</title>
 </head>
 <body id="gamePageBody">
-    <div id="gamePageMainDiv">
-        <div class="elementsAndChoiseDivs">
-            <div id="elementsUser">
-                <img class="elementsImg" src="/assets/elements/FireWhite.gif" onClick="battle('Fire');" alt="Fire">
-                <img class="elementsImg" src="/assets/elements/WaterWhite.gif" onClick="battle('Water');" alt="Water">
-                <img class="elementsImg" src="/assets/elements/EarhWhite.gif" onClick="battle('Earth');" alt="Earth">
-                <img class="elementsImg" src="/assets/elements/WindWhite.gif" onClick="battle('Wind');" alt="Wind">
+    <div id="gamePageTopDiv">
+            <div id="userSide">
+                <div id="elementsUser">
+                    <img class="elementsImg" src="/assets/elements/FireWhite.gif" onClick="battle('Fire');" alt="Fire">
+                    <img class="elementsImg" src="/assets/elements/WaterWhite.gif" onClick="battle('Water');" alt="Water">
+                    <img class="elementsImg" src="/assets/elements/EarhWhite.gif" onClick="battle('Earth');" alt="Earth">
+                    <img class="elementsImg" src="/assets/elements/WindWhite.gif" onClick="battle('Wind');" alt="Wind">
+                </div>
+                <div id="userPages">
+                </div>
             </div>
-            <div id="userScoreDiv">
-            <p id="userScore">User score</p>
+            <div id="scoresPagesChoices">
+                <div id="scores">
+
+                </div>
+                <div id="choices">
+                    <div id="userChoice"></div>
+                    <div id="dragonChoice"></div>
+                </div>
             </div>
+            <div id="dragonSide">
             <div id="elementsDragon">
                 <img class="elementsImg" src="/assets/elements/FireWhite.gif" onClick="battle('Fire');" alt="Fire">
                 <img class="elementsImg" src="/assets/elements/WaterWhite.gif" onClick="battle('Water');" alt="Water">
                 <img class="elementsImg" src="/assets/elements/EarhWhite.gif" onClick="battle('Earth');" alt="Earth">
                 <img class="elementsImg" src="/assets/elements/WindWhite.gif" onClick="battle('Wind');" alt="Wind">
             </div>
+             <div id="dragonPages">
+                    
+                </div>
+            </div>
         </div>
 
-    </div>
     <script src="/code.js"></script>
 </body>
 </html>
