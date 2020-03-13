@@ -115,6 +115,20 @@ height: 100px;
 #imgOfInvention{
     width: 500px;
 }
-#inventionInfo{
-    
+#choices{
+    display: grid;
+    grid-template-columns: 117px 117px;
+    flex-direction: row;
+    background-image: url("/choiceframe.png");
+    background-size: cover;
+    width: 500px;
+    height: 350px;
+}
+.choiceClass{
+    position: relative;
+    border-radius: 50%;
+    margin-top: 35px;
+    margin-left: 65px;
+    width:200px;
+    height: 200px;
 }
