@@ -132,8 +132,7 @@ function battle(user){
     }
     console.log("Computer "+computerScore);
     console.log("User "+userScore);
+    document.getElementById("winner").innerHTML="the winner is "+ winner;
 }
-while (winner===""){
-battle("Wind");
-}
-console.log(winner);
+
+

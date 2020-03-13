@@ -8,15 +8,17 @@
     <div id="gamePageMainDiv">
         <div class="elementsAndChoiseDivs">
             <div id="elements">
-                <img class="elementsImg" src="/assets/elements/FireWhite.gif" onClick="" alt="Fire">
-                <img class="elementsImg" src="/assets/elements/WaterWhite.gif onClick="" alt="Water">
-                <img class="elementsImg" src="/assets/elements/EarhWhite.gif" onClick="" alt="Earth">
-                <img class="elementsImg" src="/assets/elements/WindWhite.gif" onClick="" alt="Wind">
+                <img class="elementsImg" src="/assets/elements/FireWhite.gif" onClick="battle('Fire')" alt="Fire">
+                <img class="elementsImg" src="/assets/elements/WaterWhite.gif" onClick="battle(Water)" alt="Water">
+                <img class="elementsImg" src="/assets/elements/EarhWhite.gif" onClick="battle('Earth')" alt="Earth">
+                <img class="elementsImg" src="/assets/elements/WindWhite.gif" onClick="battle('Wind')" alt="Wind">
+                <p id="winner"></p>
             </div>
 
 
         </div>
 
     </div>
+    <script src="/code.js"></script>
 </body>
 </html>
