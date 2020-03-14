@@ -115,9 +115,14 @@ margin-top: 20px;
 
 }
 #userPages{
+margin-left: 65px;
+margin-top: -75px;
+}
+#userScore{
     background-image: url("/pagesFrame.png");
     margin-left: 45px;
     background-size: cover;
+    margin-top: 50px;
     width: 115px;
     height: 110px;  
 }
@@ -125,6 +130,7 @@ margin-top: 20px;
     width: 450px;
 
 }
+
 
 #elementsDragon{
 display: grid;
@@ -136,6 +142,7 @@ width: 400px;
 height: 300px;
 margin-top: -60px;
 }
+
 #dragonSide{
 width: 450px;
 margin-top: 100px;
@@ -146,11 +153,17 @@ margin-top: 100px;
     margin-top: -85px;
 }
 #dragonPages{
+    margin-left: 325px;
+    margin-top: -75px;
+    
+}
+#dragonScore{
     background-image: url("/pagesFrameDragon.png");
     margin-left: 245px;
     background-size: cover;
     width: 115px;
     height: 110px;
+    margin-top: 50px;
 }
 #stolenPage{
     display: flex;
@@ -210,6 +223,9 @@ margin-top: 100px;
     margin-top: 40px;
 }
 #continueOrQuit{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
     background-image: url("/game/question.png");
     background-size: 100%;
     background-repeat: no-repeat;
@@ -218,10 +234,19 @@ margin-top: 100px;
     margin-left: 25px;
     margin-top: -30px;
 }
-#questionWindow{
-border: solid 5px green;
-margin-left: 90px;
+#questionButtons{
+margin-bottom: 50px;
+margin-left: 160px;
 }
+#question{
+    margin-top: 80px;
+    margin-left: 50px;
+    font-family: "Milonga", cursive;
+    font-size: 25px;
+}
+
+
+
 /* Game Over Loose Page */
 #gameOverLooseBody{
     background-size: cover;
