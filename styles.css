@@ -70,6 +70,20 @@ background-image: url("/background.png");
 width: 1500px;
 height: 1500px;
 }
+#dragonName{
+margin-top: -85px;
+margin-left:100px;
+}
+#charElemPageUser{
+margin-top:-70px;
+}
+#charElemPageDragon{
+    margin-top: 55px;
+}
+#userName{
+margin-left: 125px;
+margin-top: 15px;
+}
 #rabbitGame{
 margin-left: 350px;
 width: 100px;
@@ -79,7 +93,7 @@ margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    margin-left: 45px;
+    margin-left: 10px;
 }
 .elementsImg{
     position: relative;
@@ -148,6 +162,7 @@ margin-top: 100px;
     width: 1500px;
     height: 1100px;
     margin-top: -150px;
+    margin-left:-50px;
     
 }
 #inventionName{
@@ -159,7 +174,7 @@ margin-top: 100px;
     font-family: "Milonga", cursive;
     font-size: 25px;
     letter-spacing: 0.5px;
-    margin-top:250px;
+    margin-top:150px;
     width: 500px
 
 }
@@ -202,6 +217,10 @@ margin-top: 100px;
     height: 300px;
     margin-left: 25px;
     margin-top: -30px;
+}
+#questionWindow{
+border: solid 5px green;
+margin-left: 90px;
 }
 /* Game Over Loose Page */
 #gameOverLooseBody{
