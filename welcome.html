@@ -2,26 +2,20 @@
 <html lang="en">
 <head>
    <link rel="stylesheet" type="text/css" href="styles.css">
-   <link href="https://fonts.googleapis.com/css?family=Black+And+White+Picture|Diplomata+SC|Kenia|MedievalSharp|Milonga|Miltonian+Tattoo|New+Rocker|Passero+One|Rye|Sancreek&display=swap" rel="stylesheet">
-   <!-- font-family: 'Kenia', cursive;
-font-family: 'Black And White Picture', sans-serif;
-font-family: 'Passero One', cursive;
-font-family: 'Miltonian Tattoo', cursive;
-font-family: 'Diplomata SC', cursive;
-font-family: 'MedievalSharp', cursive;
-font-family: 'New Rocker', cursive;
-font-family: 'Sancreek', cursive;
+   <link href="https://fonts.googleapis.com/css?family=Milonga|Rye|Sancreek&display=swap" rel="stylesheet">
+   
+<!-- font-family: 'Sancreek', cursive;
 font-family: 'Milonga', cursive;
 font-family: 'Rye', cursive; -->
     <title>Welcome</title>
 </head>
 <body>
     <div id="mainContainer">
-        <h1> WELCOME GUARDIAN ! </h1>
+        <h1 id="welcome"> WELCOME GUARDIAN ! </h1>
         <div id="mainPageButtonsDiv">
             <form>
-                <input type="text" placeholder="Please enter your name">
-                <input type="submit">
+                <input id="playerName" type="text" placeholder="Please enter your name">
+                <button id="getName" type="button" onclick="getName()"></button>
             </form>
             <button type="button" onclick="openGame()">Start Game</button>
             <button type="button" onclick="displayRules()">Rules and Story</button>

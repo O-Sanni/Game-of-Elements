@@ -3,17 +3,20 @@ body{
     background-image: url("/background.jpg");
     background-size: cover;
 }
-
+#welcome{
+    font-family: 'New Rocker', cursive;
+    font-size: 35px;
+}
 #storyandRulesDiv{
     display: flex;
     flex-direction: column;
-    text-align: center;
-background-image: url("/pageMain-removebg-preview.png");
-background-repeat: no-repeat;
-background-size: cover;
-width: 700px;
-height: 800px;
-opacity: 1;
+    align-items: center;
+    background-image: url("/pageMain-removebg-preview.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 700px;
+    height: 800px;
+    
 }
 #mainContainer{
 display: flex;
@@ -22,15 +25,7 @@ flex-direction: column;
 align-content: center;
 text-align: center;
 }
-#rules{
-padding: 70px;
-text-align: center;
-}
-#elements{
-width: 350px;
-height: 300px;
-margin-bottom: 300px;
-}
+
 #middleMainDiv{
     display: flex;
     flex-wrap: wrap;
@@ -43,6 +38,26 @@ margin-bottom: 300px;
 #rabbitMainImg{
     width: 200px;
     height: auto;
+}
+#rules{
+padding: 105px;
+text-align: center;
+font-family: 'Rye', cursive;
+font-size: 25px;
+opacity: 0;
+
+}
+#elements{
+width: 350px;
+height: 300px;
+opacity: 0;
+}
+@keyframes 
+animateRules{
+   100%{
+
+        opacity:1;
+    }
 }
 
 /* Styles for Game page */

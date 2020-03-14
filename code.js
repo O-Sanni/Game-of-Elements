@@ -76,9 +76,13 @@ function randomPages(){
 function openGame(){
     window.open("/index.html");
 }
-function displayRules(){
+function getName(){
+    let playerName=document.getElementById("playerName").nodeValue;
+}
 
-    
+function displayRules(){
+    document.getElementById("rules").style.animation = "animateRules  3s ease-in-out forwards";
+    document.getElementById("elements").style.animation = "animateRules 3s ease-in-out forwards";
 }
 function battle(user){
     if (userScore===5){
