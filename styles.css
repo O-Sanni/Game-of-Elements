@@ -77,13 +77,13 @@ height: 1500px;
 }
 #userPages{
     background-image: url("/pagesFrame.png");
-    margin-left: 50px;
+    margin-left: 45px;
     background-size: cover;
-    width: 100px;
-    height: 100px;  
+    width: 115px;
+    height: 110px;  
 }
 #userSide{
-
+    margin-top: 100px;
     width: 450px;
 }
 
@@ -91,30 +91,33 @@ height: 1500px;
 display: grid;
 grid-template-columns: 85px 85px;
 grid-template-rows: 90px 90px;
-background-image: url("/game/elementsframe.png");
+background-image: url("/game/elementsframeDragon.png");
 background-size: 100%;
 width: 400px;
 height: 300px;
 }
 #dragonSide{
 width: 450px;
+margin-top: 100px;
 }
 #dragonPages{
-    background-image: url("/pagesFrame.png");
-    margin-left: 50px;
+    background-image: url("/pagesFrameDragon.png");
+    margin-left: 245px;
     background-size: cover;
-
-width: 100px;
-height: 100px;
+    width: 115px;
+    height: 110px;
 }
 #stolenPage{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     background-image: url("/stolenPage.png");
+    position: relative;
     background-size: cover;
     width: 1500px;
     height: 1100px;
+    margin-top: -50px;
+    
 }
 
 #imgOfInvention{
@@ -136,4 +139,21 @@ height: 100px;
     margin-left: 65px;
     width:200px;
     height: 200px;
+}
+.elementsImgDragon{
+    position: relative;
+    border-radius: 50%;
+    width:100px;
+    height: 100px;
+    margin-left:80px;
+    margin-top: 40px;
+}
+#continueOrQuit{
+    background-image: url("/game/question.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 400px;
+    height: 300px;
+    margin-left: 25px;
+    margin-top: -30px;
 }
