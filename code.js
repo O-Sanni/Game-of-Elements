@@ -73,7 +73,13 @@ function randomPages(){
  return stolenpages;
 }
 
+function openGame(){
+    window.open("/index.html");
+}
+function displayRules(){
 
+    
+}
 function battle(user){
     if (userScore===5){
         winner="user";
