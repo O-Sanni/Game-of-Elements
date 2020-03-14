@@ -6,7 +6,7 @@ body{
 #welcome{
     font-family: 'Rye', cursive;
     font-size: 35px;
-    color: green;
+    color: linear-gradient(to right, rgba(164,107,13,1) 0%, rgba(236,204,18,1) 100%);
 }
 #storyandRulesDiv{
     display: flex;
@@ -73,6 +73,7 @@ height: 1500px;
 #rabbitGame{
 margin-left: 350px;
 width: 100px;
+margin-top: 20px;
 }
 #gamePageTopDiv{
     display: flex;
@@ -149,10 +150,18 @@ margin-top: 100px;
     margin-top: -150px;
     
 }
+#inventionName{
+    font-family: "Sancreek", cursive;
+    font-size: 45px; 
+}
 #inventionInfoDiv{
     margin-left: 50px;
+    font-family: "Milonga", cursive;
+    font-size: 25px;
+    letter-spacing: 0.5px;
     margin-top:250px;
     width: 500px
+
 }
 #imgOfInvention{
     margin-top: 300px;
