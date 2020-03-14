@@ -4,18 +4,19 @@ body{
     background-size: cover;
 }
 #welcome{
-    font-family: 'New Rocker', cursive;
+    font-family: 'Rye', cursive;
     font-size: 35px;
+    color: green;
 }
 #storyandRulesDiv{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: url("/pageMain-removebg-preview.png");
+    background-image: url("/pageMain.png");
     background-repeat: no-repeat;
     background-size: cover;
     width: 700px;
-    height: 800px;
+    height: 900px;
     
 }
 #mainContainer{
@@ -40,10 +41,12 @@ text-align: center;
     height: auto;
 }
 #rules{
-padding: 105px;
+padding: 80px;
+padding-left: 90px;
 text-align: center;
-font-family: 'Rye', cursive;
-font-size: 25px;
+font-family: "Milonga", cursive;
+font-size: 17px;
+letter-spacing: 0.5px;
 opacity: 0;
 
 }
@@ -51,6 +54,7 @@ opacity: 0;
 width: 350px;
 height: 300px;
 opacity: 0;
+margin-top: -110px;
 }
 @keyframes 
 animateRules{

@@ -11,7 +11,7 @@ const computerChoiceOfElements=["Water", "Wind","Water", "Fire"];
 let computerScore=0;
 let userScore=0;
 let winner="";
-
+let playerName="";
 
  function createInventionPages(){
 const wheel=new Inventions ("Wheel","/assets/wheel.png","The wheel stands out as the OG of engineering marvels and one of the most famous inventions that influenced numerous other things. This primitive technology made it easier for all of us to travel. From the archeological excavations, the oldest known wheel is from Mesopotamia, around 3500 B.C. As a result of advancement in the new and innovative design of wheels, industrialization could take root.The wheel serves a vital purpose in our lives, and we couldn't imagine the world without them.");
@@ -76,8 +76,9 @@ function randomPages(){
 function openGame(){
     window.open("/index.html");
 }
+
 function getName(){
-    let playerName=document.getElementById("playerName").nodeValue;
+    playerName=document.getElementById("playerName").value;
 }
 
 function displayRules(){
