@@ -136,10 +136,10 @@ function battle(user){
 }
 
 
-function showImg(){
+
 
     document.getElementById('imgOfInvention').src=arrayOfInventions[0].pictureLocation;  
     document.getElementById('inventionInfo').innerHTML=arrayOfInventions[0].information;
     document.getElementById('inventionName').innerHTML=arrayOfInventions[0].name;
-}
+
 
