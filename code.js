@@ -85,6 +85,17 @@ function displayRules(){
     document.getElementById("rules").style.animation = "animateRules  3s ease-in-out forwards";
     document.getElementById("elements").style.animation = "animateRules 3s ease-in-out forwards";
 }
+
+function 
+
+
+
+
+
+
+
+
+
 function battle(user){
     if (userScore===5){
         winner="user";
