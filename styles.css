@@ -178,7 +178,7 @@ margin-top: 100px;
     background-size: cover;
     width: 115px;
     height: 110px;
-    margin-top: 50px;
+    margin-top: 90px;
 }
 #dragonScoreTxt{
 margin-left: 275px;
@@ -234,6 +234,13 @@ font-size: 25px;
     margin-left: 65px;
     width:200px;
     height: 200px;
+    
+}
+#dragonChoice{
+    opacity:0
+}
+#userChoice{
+    opacity:0;
 }
 .elementsImgDragon{
     position: relative;
@@ -260,16 +267,23 @@ font-size: 25px;
     height: 300px;
     margin-left: 25px;
     margin-top: -30px;
+    opacity: 0;
 }
 #questionButtons{
 margin-bottom: 50px;
 margin-left: 130px;
 }
 #question{
-    margin-top: 80px;
+    margin-top: -5px;
     margin-left: 50px;
     font-family: "Milonga", cursive;
     font-size: 25px;
+}
+#winOrLoose{
+    margin-left:145px;
+    margin-top: 30px;
+    font-family: "Milonga", cursive;
+    font-size: 25px; 
 }
 
 
