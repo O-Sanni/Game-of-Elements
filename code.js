@@ -81,11 +81,7 @@ function displayRules(){
     document.getElementById("elements").style.animation = "animateRules 3s ease-in-out forwards";
 }
 
-function battle(user){
-   
-        document.getElementById("userChoice").src=`/assets/elements/${user}White.gif`;
-        
-}
+function battle(user){    
     // if (userScore===5){
     //     winner="user";
         
@@ -95,89 +91,81 @@ function battle(user){
        
     // }
     // else{
-        // if(user=== "Fire"){
-        //         document.getElementById("userChoice").src="/assets/elements/FireWhite.gif";
-        // }
-        // else if(user==="Water"){
-        //     document.getElementById("userChoice").src="/assets/elements/WaterWhite.gif";
-        // }
-        // else if(user=== "Wind"){
-        //             document.getElementById("userChoice").src="/assets/elements/WindWhite.gif";
-        // }
-        // else if (user==="Earth"){
-        //             document.getElementById("userChoice").src="/assets/elements/EarhWhite.gif";
-        // }
-        // }
-        
-    //     const computerChoice=computerChoiceOfElements[Math.floor(Math.random()*4)];
-    //     const userChoice=user;
-    //     console.log("Computer Choice " + computerChoice);
-    //     console.log("User choice "+ userChoice);
+     let userChoice=user;  
+    let computerChoice=computerChoiceOfElements[Math.floor(Math.random()*4)];
+    document.getElementById("userChoice").src=`/assets/elements/${userChoice}White.gif`;
+    document.getElementById("dragonChoice").src=`/assets/elements/${computerChoice}White.gif`;
+    
+        // console.log("Computer Choice " + computerChoice);
+        // console.log("User choice "+ userChoice);
+        if (userChoice===computerChoice){
+            document.getElementById("winerMiniGame").innerHTML="No winner";
+            }
+        else if(userChoice==="Wind"){
+            if (userChoice==="Wind" && computerChoice==="Water"){
+                userScore+=1;
+                document.getElementById("userScoreTxt").innerHTML=userScore;
+                document.getElementById("winerMiniGame").innerHTML="Guardian wins";
+            }
+            else if (userChoice==="Wind" && computerChoice==="Fire"){
+                userScore+=1;
+                computerScore+=1;
+                document.getElementById("userScoreTxt").innerHTML=userScore;
+                document.getElementById("dragonScoreTxt").innerHTML=computerScore;
+                document.getElementById("winerMiniGame").innerHTML="Both Players wins";
+            }  
+            else if(userChoice==="Wind" && computerChoice==="Earth"){
+                document.getElementById("winerMiniGame").innerHTML="No winner";
+            }
+        }
+        else if (userChoice === "Fire"){
+            if(userChoice === "Fire" && computerChoice==="Earth"){
+                userScore+=1;
+                document.getElementById("userScoreTxt").innerHTML=userScore;
+                document.getElementById("winerMiniGame").innerHTML="Guardian wins";
+            }
+            else if(userChoice === "Fire" && computerChoice==="Water"){
+                computerScore+=1;
+                document.getElementById("dragonScoreTxt").innerHTML=computerScore;
+                document.getElementById("winerMiniGame").innerHTML="Dragon wins";
+            }
+        }
+        else if(userChoice==="Earth"){
+            if(userChoice==="Earth" && computerChoice==="Fire"){
+                computerScore+=1;
+                document.getElementById("dragonScoreTxt").innerHTML=computerScore;
+                document.getElementById("winerMiniGame").innerHTML="Dragon wins";
+            }
+            else if(userChoice==="Earth" && computerChoice==="Water"){
+                userScore+=1;
+                document.getElementById("userScoreTxt").innerHTML=userScore;
+                document.getElementById("winerMiniGame").innerHTML="Guardian wins";
+            }
+            else if(userChoice==="Earth" && computerChoice==="Wind"){
+                document.getElementById("winerMiniGame").innerHTML="No winner";
+            }
+        }
+        else if (userChoice==="Water"){
+            if(userChoice==="Water" && computerChoice==="Fire"){
+                userScore+=1;
+                document.getElementById("userScoreTxt").innerHTML=userScore;
+                document.getElementById("winerMiniGame").innerHTML="Guardian wins";
+            }
+            else if(userChoice==="Water" && computerChoice==="Wind"){
+                computerScore+=1;
+                document.getElementById("dragonScoreTxt").innerHTML=computerScore;
+                document.getElementById("winerMiniGame").innerHTML="Dragon wins";
+            }
+            else if(userChoice==="Water" && computerChoice==="Earth"){
+                computerScore+=1;
+                document.getElementById("dragonScoreTxt").innerHTML=computerScore;
+                document.getElementById("winerMiniGame").innerHTML="Dragon wins";
+            }
+        }
 
-    //     if(userChoice==="Wind"){
-    //         if (userChoice==="Wind" && computerChoice==="Water"){
-    //             userScore+=1;
-    //             document.getElementById("userScoreTxt").innerHTML=userScore;
-    //             document.getElementById("winerMiniGame").innerHTML="Guardian wins";
-    //         }
-    //         else if (userChoice==="Wind" && computerChoice==="Fire"){
-    //             userScore+=1;
-    //             computerScore+=1;
-    //             document.getElementById("userScoreTxt").innerHTML=userScore;
-    //             document.getElementById("dragonScoreTxt").innerHTML=computerScore;
-    //             document.getElementById("winerMiniGame").innerHTML="Both Players wins";
-    //         }  
-    //     }
-    //     else if (userChoice === "Fire"){
-    //         if(userChoice === "Fire" && computerChoice==="Earth"){
-    //             userScore+=1;
-    //             document.getElementById("userScoreTxt").innerHTML=userScore;
-    //             document.getElementById("winerMiniGame").innerHTML="Guardian wins";
-    //         }
-    //         else if(userChoice === "Fire" && computerChoice==="Water"){
-    //             computerScore+=1;
-    //             document.getElementById("dragonScoreTxt").innerHTML=computerScore;
-    //             document.getElementById("winerMiniGame").innerHTML="Dragon wins";
-    //         }
-    //     }
-    //     else if(userChoice==="Earth"){
-    //         if(userChoice==="Earth" && computerChoice==="Fire"){
-    //             computerScore+=1;
-    //             document.getElementById("dragonScoreTxt").innerHTML=computerScore;
-    //             document.getElementById("winerMiniGame").innerHTML="Dragon wins";
-    //         }
-    //         else if(userChoice==="Earth" && computerChoice==="Water"){
-    //             userScore+=1;
-    //             document.getElementById("userScoreTxt").innerHTML=userScore;
-    //             document.getElementById("winerMiniGame").innerHTML="Guardian wins";
-    //         }
-    //     }
-    //     else if (userChoice==="Water"){
-    //         if(userChoice==="Water" && computerChoice==="Fire"){
-    //             userScore+=1;
-    //             document.getElementById("userScoreTxt").innerHTML=userScore;
-    //             document.getElementById("winerMiniGame").innerHTML="Guardian wins";
-    //         }
-    //         else if(userChoice==="Water" && computerChoice==="Wind"){
-    //             computerScore+=1;
-    //             document.getElementById("dragonScoreTxt").innerHTML=computerScore;
-    //             document.getElementById("winerMiniGame").innerHTML="Dragon wins";
-    //         }
-    //         else if(userChoice==="Water" && computerChoice==="Earth"){
-    //             computerScore+=1;
-    //             document.getElementById("dragonScoreTxt").innerHTML=computerScore;
-    //             document.getElementById("winerMiniGame").innerHTML="Dragon wins";
-    //         }
-    //     }
-    //     else{
-    //         document.getElementById("winerMiniGame").innerHTML="No winner";
-    //         }
-
-    // }
+    }
      
-    
-    
-//}
+
 
 // function exitGame(){
 
