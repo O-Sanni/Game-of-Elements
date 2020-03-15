@@ -9,8 +9,9 @@ class Inventions{
 let arrayOfInventions=[];
 const computerChoiceOfElements=["Water", "Wind","Water", "Fire"];
 let computerScore=0;
-let userScore=0;
+let userScore=4;
 let stolenpages=[];
+
 
 
  function createInventionPages(){
@@ -57,6 +58,7 @@ function randomPages(){
  let randomPageNumber1=getRandomNumber1_15();
  let randomPageNumber2=getRandomNumber1_15();
  let randomPageNumber3=getRandomNumber1_15();
+ 
  //console.log(`${randomPageNumber1}; ${randomPageNumber2}; ${randomPageNumber3} `)
  if (randomPageNumber1 === randomPageNumber2 || randomPageNumber2===randomPageNumber3 || randomPageNumber1===randomPageNumber3)
  {
@@ -69,8 +71,8 @@ function randomPages(){
  }
  //console.log(stolenpages);
  //console.log(stolenpages.length);
- return stolenpages;
 }
+randomPages();
 
 function openGame(){
     window.open("/index.html");
@@ -81,110 +83,112 @@ function displayRules(){
     document.getElementById("elements").style.animation = "animateRules 3s ease-in-out forwards";
 }
 
-// function battle(user){    
-//      document.getElementById("userChoice").style.opacity="1";
-//      document.getElementById("dragonChoice").style.opacity="1";
-//      let userChoice=user;  
-//      let computerChoice=computerChoiceOfElements[Math.floor(Math.random()*4)];
-//     document.getElementById("userChoice").src=`/assets/elements/${userChoice}White.gif`;
-//     document.getElementById("dragonChoice").src=`/assets/elements/${computerChoice}White.gif`;
+function battle(user){    
+     document.getElementById("userChoice").style.opacity="1";
+     document.getElementById("dragonChoice").style.opacity="1";
+     let userChoice=user;  
+     let computerChoice=computerChoiceOfElements[Math.floor(Math.random()*4)];
+    document.getElementById("userChoice").src=`/assets/elements/${userChoice}White.gif`;
+    document.getElementById("dragonChoice").src=`/assets/elements/${computerChoice}White.gif`;
     
-//         // console.log("Computer Choice " + computerChoice);
-//         // console.log("User choice "+ userChoice);
-//         if (userChoice===computerChoice){
-//             document.getElementById("winerMiniGame").innerHTML="No winner";
-//             }
-//         else if(userChoice==="Wind"){
-//             if (userChoice==="Wind" && computerChoice==="Water"){
-//                 userScore+=1;
-//                 document.getElementById("userScoreTxt").innerHTML=userScore;
-//                 document.getElementById("winerMiniGame").innerHTML="Guardian wins";
-//             }
-//             else if (userChoice==="Wind" && computerChoice==="Fire"){
-//                 userScore+=1;
-//                 computerScore+=1;
-//                 document.getElementById("userScoreTxt").innerHTML=userScore;
-//                 document.getElementById("dragonScoreTxt").innerHTML=computerScore;
-//                 document.getElementById("winerMiniGame").innerHTML="Both Players wins";
-//             }  
-//             else if(userChoice==="Wind" && computerChoice==="Earth"){
-//                 document.getElementById("winerMiniGame").innerHTML="No winner";
-//             }
-//         }
-//         else if (userChoice === "Fire"){
-//             if(userChoice === "Fire" && computerChoice==="Earth"){
-//                 userScore+=1;
-//                 document.getElementById("userScoreTxt").innerHTML=userScore;
-//                 document.getElementById("winerMiniGame").innerHTML="Guardian wins";
-//             }
-//             else if(userChoice === "Fire" && computerChoice==="Water"){
-//                 computerScore+=1;
-//                 document.getElementById("dragonScoreTxt").innerHTML=computerScore;
-//                 document.getElementById("winerMiniGame").innerHTML="Dragon wins";
-//             }
-//         }
-//         else if(userChoice==="Earth"){
-//             if(userChoice==="Earth" && computerChoice==="Fire"){
-//                 computerScore+=1;
-//                 document.getElementById("dragonScoreTxt").innerHTML=computerScore;
-//                 document.getElementById("winerMiniGame").innerHTML="Dragon wins";
-//             }
-//             else if(userChoice==="Earth" && computerChoice==="Water"){
-//                 userScore+=1;
-//                 document.getElementById("userScoreTxt").innerHTML=userScore;
-//                 document.getElementById("winerMiniGame").innerHTML="Guardian wins";
-//             }
-//             else if(userChoice==="Earth" && computerChoice==="Wind"){
-//                 document.getElementById("winerMiniGame").innerHTML="No winner";
-//             }
-//         }
-//         else if (userChoice==="Water"){
-//             if(userChoice==="Water" && computerChoice==="Fire"){
-//                 userScore+=1;
-//                 document.getElementById("userScoreTxt").innerHTML=userScore;
-//                 document.getElementById("winerMiniGame").innerHTML="Guardian wins";
-//             }
-//             else if(userChoice==="Water" && computerChoice==="Wind"){
-//                 computerScore+=1;
-//                 document.getElementById("dragonScoreTxt").innerHTML=computerScore;
-//                 document.getElementById("winerMiniGame").innerHTML="Dragon wins";
-//             }
-//             else if(userChoice==="Water" && computerChoice==="Earth"){
-//                 computerScore+=1;
-//                 document.getElementById("dragonScoreTxt").innerHTML=computerScore;
-//                 document.getElementById("winerMiniGame").innerHTML="Dragon wins";
-//             }
-//         }
+        // console.log("Computer Choice " + computerChoice);
+        // console.log("User choice "+ userChoice);
+        if (userChoice===computerChoice){
+            document.getElementById("winerMiniGame").innerHTML="No winner";
+            }
+        else if(userChoice==="Wind"){
+            if (userChoice==="Wind" && computerChoice==="Water"){
+                userScore+=1;
+                document.getElementById("userScoreTxt").innerHTML=userScore;
+                document.getElementById("winerMiniGame").innerHTML="Guardian wins";
+            }
+            else if (userChoice==="Wind" && computerChoice==="Fire"){
+                userScore+=1;
+                computerScore+=1;
+                document.getElementById("userScoreTxt").innerHTML=userScore;
+                document.getElementById("dragonScoreTxt").innerHTML=computerScore;
+                document.getElementById("winerMiniGame").innerHTML="Both Players wins";
+            }  
+            else if(userChoice==="Wind" && computerChoice==="Earth"){
+                document.getElementById("winerMiniGame").innerHTML="No winner";
+            }
+        }
+        else if (userChoice === "Fire"){
+            if(userChoice === "Fire" && computerChoice==="Earth"){
+                userScore+=1;
+                document.getElementById("userScoreTxt").innerHTML=userScore;
+                document.getElementById("winerMiniGame").innerHTML="Guardian wins";
+            }
+            else if(userChoice === "Fire" && computerChoice==="Water"){
+                computerScore+=1;
+                document.getElementById("dragonScoreTxt").innerHTML=computerScore;
+                document.getElementById("winerMiniGame").innerHTML="Dragon wins";
+            }
+        }
+        else if(userChoice==="Earth"){
+            if(userChoice==="Earth" && computerChoice==="Fire"){
+                computerScore+=1;
+                document.getElementById("dragonScoreTxt").innerHTML=computerScore;
+                document.getElementById("winerMiniGame").innerHTML="Dragon wins";
+            }
+            else if(userChoice==="Earth" && computerChoice==="Water"){
+                userScore+=1;
+                document.getElementById("userScoreTxt").innerHTML=userScore;
+                document.getElementById("winerMiniGame").innerHTML="Guardian wins";
+            }
+            else if(userChoice==="Earth" && computerChoice==="Wind"){
+                document.getElementById("winerMiniGame").innerHTML="No winner";
+            }
+        }
+        else if (userChoice==="Water"){
+            if(userChoice==="Water" && computerChoice==="Fire"){
+                userScore+=1;
+                document.getElementById("userScoreTxt").innerHTML=userScore;
+                document.getElementById("winerMiniGame").innerHTML="Guardian wins";
+            }
+            else if(userChoice==="Water" && computerChoice==="Wind"){
+                computerScore+=1;
+                document.getElementById("dragonScoreTxt").innerHTML=computerScore;
+                document.getElementById("winerMiniGame").innerHTML="Dragon wins";
+            }
+            else if(userChoice==="Water" && computerChoice==="Earth"){
+                computerScore+=1;
+                document.getElementById("dragonScoreTxt").innerHTML=computerScore;
+                document.getElementById("winerMiniGame").innerHTML="Dragon wins";
+            }
+        }
 
-//     if (userScore===5){
-//         continueOrQuit("User");
+    if (userScore===5){
+        continueOrQuit("User");
           
-//     }
-//     else if(computerScore===5){
-//         continueOrQuit("Computer");
-//     }
+    }
+    else if(computerScore===5){
+        continueOrQuit("Computer");
+    }
      
-// }
+}
 
-console.log(stolenpages[0].name);
-// function continueOrQuit(winner){
-//     if(winner==="User"){
-//         document.getElementById("continueOrQuit").style.opacity="1";
-//         document.getElementById("winOrLoose").innerHTML="You win page";
-//         document.getElementById("inventionName").innerHTML=stolenpages[0].name;
-//     }
+function continueOrQuit(winner){
+    if(winner==="User"){
+        document.getElementById("continueOrQuit").style.opacity="1";
+        document.getElementById("winOrLoose").innerHTML="You win page";
+        document.getElementById("inventionName").innerHTML=stolenpages[0].name;
+        document.getElementById("inventionInfo").innerHTML=stolenpages[0].information;
+        document.getElementById( "imgOfInvention").src=stolenpages[0].pictureLocation;
+        document.getElementById( "imgOfInvention").alt=stolenpages[0].name;
+        stolenpages.shift();
+    }
     
+     else if(winner==="Computer"){
+        document.getElementById("continueOrQuit").style.opacity="1";
+        document.getElementById("winOrLoose").innerHTML="You loose";
         
-        // document.getElementById("inventionInfo").innerHTML=stolenpages[0].imgOfInvention;
-        // document.getElementById( "imgOfInvention").src=stolenpages[0].pictureLocation;
-        // document.getElementById( "imgOfInvention").alt=stolenpages[0].name;
-        // stolenpages.shift();
-//     document.getElementById("continueOrQuit").style.opacity="1";
-// document.getElementById("winOrLoose").innerHTML="You loose";
-//         document.getElementById("continueOrQuit").style.opacity="1";}
-// function exitGame(){
+     }   
+            
+}
+function exitGame(){
 
-// }
+}
 function reloadPage(){
     location.reload();
 }
