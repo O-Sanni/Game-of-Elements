@@ -78,17 +78,30 @@ function openGame(){
     window.open("/index.html");
 }
 
-function getName(){
-    playerName=document.getElementById("playerName").value;
-    document.getElementById("userName").innerHTML=playerName;
+// function getName(){
+    document.('form').submit(function (event) {
+        event.preventDefault(); //prevents the default action
+     playerName=document.getElementById("playerName").value;
+    document.getElementById("userName").value=playerName;
 }
+//}
+    
+
+
+
+
+
+
+
+
+
 
 function displayRules(){
     document.getElementById("rules").style.animation = "animateRules  3s ease-in-out forwards";
     document.getElementById("elements").style.animation = "animateRules 3s ease-in-out forwards";
 }
 
-function getName()
+
 
 
 
