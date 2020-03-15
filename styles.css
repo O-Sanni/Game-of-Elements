@@ -65,11 +65,14 @@ animateRules{
 }
 
 /* Styles for Game page */
+
 #gamePageBody{
 background-image: url("/background.png");
 width: 1500px;
 height: 1500px;
 }
+
+
 #dragonName{
 margin-top: -85px;
 margin-left:100px;
@@ -269,17 +272,27 @@ margin-left: 130px;
     font-size: 25px;
 }
 
-
-
-/* Game Over Loose Page */
-#gameOverLooseBody{
-    background-size: cover;
+#coverWin{
+    opacity:0;
+    background-image: url("/winnerPage.jpg");
+    background-size: 100%;
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px; 
+    z-index:1;
+}
+#coverLoose{
+    opacity:0;
+    background-image: url("/LooseBackground.png");
+    background-size:100%;
     background-repeat: no-repeat;
-    size: 100%;
-    width: 100%;
-    
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px; 
+    z-index:1;
 }
-#fire{
-    margin-top:1000px;
-    margin-left: 500px;
-}
+
