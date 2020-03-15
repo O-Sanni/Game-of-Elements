@@ -272,7 +272,8 @@ margin-left: 130px;
     font-size: 25px;
 }
 
-#coverWin{
+
+/* #coverWin{
     opacity:0;
     background-image: url("/winnerPage.jpg");
     background-size: 100%;
@@ -294,5 +295,5 @@ margin-left: 130px;
     top:0px;
     left:0px; 
     z-index:1;
-}
+} */
 
