@@ -25,7 +25,8 @@ flex-wrap: wrap;
 flex-direction: column;
 align-content: center;
 text-align: center;
-margin-top: -200px;
+margin-top: -300px;
+margin-left: 50px;
 }
 
 #middleMainDiv{
@@ -80,6 +81,13 @@ margin-top: -110px;
     margin-top: -60px;
     animation: rotateleft 5s linear infinite;
 }
+#airCraft{
+    width: 150px;
+    height: auto;
+    opacity: 0;
+    animation:movingAir 35s ease-in-out infinite; 
+    
+}
 
 @keyframes 
 animateRules{
@@ -107,6 +115,25 @@ rotateright{
         transform: rotate(0deg);
     }
 }
+@keyframes
+    movingAir{
+    0%{
+        transform: translateX(-10px);
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    85%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateX(1400px);
+        opacity: 0;
+
+    }
+}
+
 
 /* Styles for Game page */
 
@@ -350,18 +377,34 @@ margin-left: 130px;
     margin-top:100px;
     display:none;
 }
+#baloon{
+    display:none;
+    width: 250px;
+    height: 250px;
+    margin-top: 600px;
+    margin-left: 1000px;
+    opacity: 0;
 
-/* #coverWin{
-    opacity:0;
-    background-image: url("/winnerPage.jpg");
-    background-size: 100%;
-    position:fixed;
-    width:100%;
-    height:100%;
-    top:0px;
-    left:0px; 
-    z-index:1;
-} */
+}
+
+@keyframes
+movebaloon{
+0%{
+            transform: translateY(-10px);
+            opacity: 0;
+        }
+        10%{
+            opacity: 1;
+        }
+        85%{
+            opacity: 1;
+        }
+        100%{
+            transform: translateY(0px);
+            opacity: 0;
+    
+        } 
+}
 
 
 

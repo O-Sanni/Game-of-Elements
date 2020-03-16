@@ -88,6 +88,7 @@ function displayRules(){
 }
 
 function win(){
+    document.getElementById("baloon").style.display="block";
     document.getElementById("coverWin").style.opacity="0.9";
     document.getElementById("coverWin").style.zIndex="1";
     document.getElementById("coverWin").style.backgroundImage="url('/winnerPage.jpg')";
