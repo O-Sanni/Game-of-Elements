@@ -377,16 +377,16 @@ margin-left: 130px;
 #win{
     font-family: 'Sancreek', cursive;
     font-size: 55px;
-    color: rgb(12, 247, 255);
     margin-left: 550px;
     margin-top:100px;
+    color:rgb(22, 218, 218);
     display:none;
 }
 #baloon{
     display:none;
     width: 250px;
     height: 250px;
-    margin-top: 300px;
+    margin-top: 500px;
     margin-left: 950px;
     opacity: 0;
     animation: movebaloon 25s ease-in-out infinite;
@@ -396,12 +396,13 @@ margin-left: 130px;
     display:none;
     width: 250px;
     height: 250px;
+    margin-left:-450px;
     animation: explosion 15s ease-in-out infinite;
 }
 #explosion2{
     display:none;
     margin-top: -250px;
-    margin-left: 1100px;
+    margin-left: 500px;
     width: 250px;
     height: 250px;
     animation: explosion 15s ease-in-out infinite;
@@ -429,7 +430,7 @@ movingAircraft{
 @keyframes
 movebaloon{
 0%{
-            transform: translateY(200px);
+            transform: translateY(0px);
             opacity: 0;
         }
         10%{
