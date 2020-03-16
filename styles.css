@@ -147,16 +147,21 @@ height: 1500px;
 #dragonName{
 margin-top: -85px;
 margin-left:100px;
+font-family: "Sancreek", cursive;
+font-size: 30px;
 }
 #charElemPageUser{
-margin-top:-70px;
+margin-top:-80px;
 }
 #charElemPageDragon{
     margin-top: 55px;
 }
 #userName{
+
 margin-left: 125px;
 margin-top: 15px;
+font-family: "Sancreek", cursive;
+font-size: 30px;
 }
 #rabbitGame{
 margin-left: 350px;
@@ -381,16 +386,50 @@ margin-left: 130px;
     display:none;
     width: 250px;
     height: 250px;
-    margin-top: 600px;
-    margin-left: 1000px;
+    margin-top: 300px;
+    margin-left: 950px;
     opacity: 0;
+    animation: movebaloon 25s ease-in-out infinite;
 
+}
+#explosion1{
+    display:none;
+    width: 250px;
+    height: 250px;
+    animation: explosion 15s ease-in-out infinite;
+}
+#explosion2{
+    display:none;
+    margin-top: -250px;
+    margin-left: 1100px;
+    width: 250px;
+    height: 250px;
+    animation: explosion 15s ease-in-out infinite;
+}
+#aircraft{
+    display:none;
+    width: 250px;
+    height: 250px;
+    margin-top: -550px;
+    margin-left: -500px;
+    transform: scale(5);
+    animation: movingAircraft  35s ease-in-out infinite;     
+}
+
+@keyframes 
+movingAircraft{
+    from {
+        transform: translateX(0px) scale(5);
+      }
+      to {
+          transform: translateX(1800px) scale(0);
+}
 }
 
 @keyframes
 movebaloon{
 0%{
-            transform: translateY(-10px);
+            transform: translateY(200px);
             opacity: 0;
         }
         10%{
@@ -400,12 +439,24 @@ movebaloon{
             opacity: 1;
         }
         100%{
-            transform: translateY(0px);
+            transform: translateY(-700px);
             opacity: 0;
     
         } 
 }
 
+@keyframes
+    explosion{
+        from {
+            transform: scale(0);
+            opacity:1;
+          }
+          to {
+              transform: scale(4);
+              opacity:0;
+
+          }
+        }
 
 
 @keyframes 

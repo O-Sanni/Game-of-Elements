@@ -89,6 +89,7 @@ function displayRules(){
 
 function win(){
     document.getElementById("baloon").style.display="block";
+    document.getElementById("aircraft").style.display="block";
     document.getElementById("coverWin").style.opacity="0.9";
     document.getElementById("coverWin").style.zIndex="1";
     document.getElementById("coverWin").style.backgroundImage="url('/winnerPage.jpg')";
@@ -246,6 +247,8 @@ function continueGame(){
 }
  function exitGame(){
     document.getElementById("coverLoose").style.opacity="0.9";
+    document.getElementById("explosion1").style.display="block";
+    document.getElementById("explosion2").style.display="block";
     document.getElementById("coverLoose").style.zIndex="1";
     document.getElementById("coverLoose").style.backgroundImage="url('LooseBackground.png')";
     document.getElementById("coverLoose").style.backgroundSize="100%";
