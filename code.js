@@ -12,6 +12,7 @@ let computerScore=0;
 let userScore=4;
 let dragonPages=3;
 let userPages=0;
+let dragonWins=0;
 let stolenpages=[];
 
 document.getElementById("dragonPages").innerHTML=`Pages ${dragonPages}`;
@@ -30,7 +31,7 @@ const petrol=new Inventions ("Petrol","/assets/petrol.png", "Without gas, there 
 arrayOfInventions.push(petrol);
 const antibiotics=new Inventions ("Antibiotics","/assets/antibiotics.png", "Antibiotics saved millions of lives by killing and inhibiting the growth of harmful bacteria. Louis Pasteur and Robert Koch first described the Antibiosis (phenomena of antibiotic drug) in 1877. In 1928, Alexander Fleming set the first leap in antibiotics by identifying penicillin, the chemical compound with antibiotic properties. Throughout the 20th century, antibiotics spread rapidly and proved to be a major living improvement, fighting nearly every known form of infection and protecting peoples' health. ");
 arrayOfInventions.push(antibiotics);
-const railways=new Inventions ("Railways","/assets/rails.png","assets/railways.jpg","Railways is a mode of transport which can carry a large number of passengers with ease of comfort and/or heavy loads to long distances. Modern trains history is around 200 years old, which revolutionized the way we travel. Distant lands become possible, industries are powered with an infinite amount of raw materials. During 1500 -1800, wagonways were common in Europe, which was used in mining. After the invention of the Steam engine, more researchers were carried out throughout the world for a better design. The commercial appearance of train networks came in the late 1820s, and the pioneer in that field was inventor George Stephenson, with his design 'Rocket', the most famous early railway locomotive. In 1821, Stephenson was appointed as an engineer for the construction of the Stockton and Darlington railway, which was opened as the first public railway in 1825.");
+const railways=new Inventions ("Railways","/assets/rails.png","Railways is a mode of transport which can carry a large number of passengers with ease of comfort and/or heavy loads to long distances. Modern trains history is around 200 years old, which revolutionized the way we travel. Distant lands become possible, industries are powered with an infinite amount of raw materials. During 1500 -1800, wagonways were common in Europe, which was used in mining. After the invention of the Steam engine, more researchers were carried out throughout the world for a better design. The commercial appearance of train networks came in the late 1820s, and the pioneer in that field was inventor George Stephenson, with his design 'Rocket', the most famous early railway locomotive. In 1821, Stephenson was appointed as an engineer for the construction of the Stockton and Darlington railway, which was opened as the first public railway in 1825.");
 arrayOfInventions.push(railways);
 const nail=new Inventions ("Nail","/assets/nail.png","The sophisticated human life would not have been possible without the invention of a small nail. They provide one of the best clues in determining the age of historic buildings. Prior to the invention of nails, wood structures were built by geometrically interlocking adjacent boards. The invention of nails goes back to several thousand years and was possible only after the development of casting and shaping a metal.Around 3400 BC, Bronze nails were found in Egypt. According to the University of Vermont, the hand-wrought nails were a norm until the 1790s and early 1800s. By 1913, 90 percent of nails produced in the U.S. were steel wire nails. Other types of nails include pins, tacks, brads, and spikes with wire nails being popular.")
 arrayOfInventions.push(nail);
@@ -87,7 +88,7 @@ function displayRules(){
 }
 
 function battle(user){  
-      if(userScore===5 || computerScore===5 || userPages===3){
+      if(userScore===5 || computerScore===5 || userPages===3 || dragonWins===3){
           return;
       }
      
@@ -183,6 +184,7 @@ function continueOrQuit(winner){
         document.getElementById("dragonPages").innerHTML=`Pages ${dragonPages}`;
         document.getElementById("userPages").innerHTML=`Pages ${userPages}`;
         document.getElementById("winOrLoose").innerHTML="You win page";
+        document.getElementById("stolenPage").style.animation = "animatePages 3s ease-in-out forwards";
         document.getElementById("inventionName").innerHTML=stolenpages[0].name;
         document.getElementById("inventionInfo").innerHTML=stolenpages[0].information;
         document.getElementById( "imgOfInvention").src=stolenpages[0].pictureLocation;
@@ -190,6 +192,7 @@ function continueOrQuit(winner){
     }
     
      else if(winner==="Computer"){
+         dragonWins+=1;
         document.getElementById("continueOrQuit").style.opacity="1";
         document.getElementById("winOrLoose").innerHTML="You loose";
         
@@ -204,10 +207,13 @@ function continueGame(){
         return
     }
     stolenpages.shift();
-    userScore=0;
+    userScore=4;
     computerScore=0;
-    // document.getElementById("userScore").innerHTML=userScore;
-    // document.getElementById("dragonScore").innerHTML=computerScore;
+    document.getElementById("userScoreTxt").innerHTML=userScore;
+    document.getElementById("dragonScoreTxt").innerHTML=computerScore;
+    document.getElementById("stolenPage").style.animation="animatePagesDis 2s ease-in-out";
+    document.getElementById("continueOrQuit").style.opacity="0";
+    
 
 }
 // function exitGame(){

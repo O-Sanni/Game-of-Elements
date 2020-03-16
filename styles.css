@@ -197,6 +197,7 @@ font-size: 25px;
     height: 1100px;
     margin-top: -150px;
     margin-left:-50px;
+    opacity: 0;
     
 }
 #inventionName{
@@ -318,3 +319,19 @@ margin-left: 130px;
 } */
 
 
+@keyframes 
+animatePages{
+   100%{
+
+        opacity:1;
+    }
+}
+@keyframes 
+animatePagesDis{
+    0%{
+        opacity: 1;
+    }
+   100%{
+       opacity:0;
+    }
+}
