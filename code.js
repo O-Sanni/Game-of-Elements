@@ -86,7 +86,11 @@ function displayRules(){
     document.getElementById("elements").style.animation = "animateRules 3s ease-in-out forwards";
 }
 
-function battle(user){    
+function battle(user){  
+      if(userScore===5 || computerScore===5 || userPages===3){
+          return;
+      }
+     
      document.getElementById("userChoice").style.opacity="1";
      document.getElementById("dragonChoice").style.opacity="1";
      let userChoice=user;  
@@ -160,15 +164,15 @@ function battle(user){
                 document.getElementById("winerMiniGame").innerHTML="Dragon wins";
             }
         }
-
-    if (userScore===5){
+if (userScore===5){
         continueOrQuit("User");
-          
+          return;
     }
     else if(computerScore===5){
         continueOrQuit("Computer");
+        return;
     }
-     
+    
 }
 
 function continueOrQuit(winner){
@@ -183,7 +187,6 @@ function continueOrQuit(winner){
         document.getElementById("inventionInfo").innerHTML=stolenpages[0].information;
         document.getElementById( "imgOfInvention").src=stolenpages[0].pictureLocation;
         document.getElementById( "imgOfInvention").alt=stolenpages[0].name;
-        stolenpages.shift();
     }
     
      else if(winner==="Computer"){
@@ -193,12 +196,32 @@ function continueOrQuit(winner){
      }   
             
 }
-function exitGame(){
-
-}
 function reloadPage(){
     location.reload();
 }
-// function continueGame(){
+function continueGame(){
+    if(userPages===3){
+        return
+    }
+    stolenpages.shift();
+    userScore=0;
+    computerScore=0;
+    // document.getElementById("userScore").innerHTML=userScore;
+    // document.getElementById("dragonScore").innerHTML=computerScore;
+
+}
+// function exitGame(){
+//     document.getElementById("gameDiv").style.zIndex="1";
+//     document.getElementById("coverLoose").style.opacity="0.9";
+//     document.getElementById("coverLoose").style.zIndex="1";
+//     document.getElementById("coverLoose").style.backgroundImage.url="/LooseBackground.png";
+//     document.getElementById("coverLoose").style.backgroundSize="100%";
+//     document.getElementById("coverLoose").style.backgroundRepeat="no-repeat";
+//     document.getElementById("coverLoose").style.position="fixed";
+//     document.getElementById("coverLoose").style.width="100%";
+//    document.getElementById("coverLoose").style.height="100%";
+//     document.getElementById("coverLoose").style.top="0px";
+//     document.getElementById("coverLoose").style.left="0px";
 
 // }
+

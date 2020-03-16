@@ -285,7 +285,13 @@ margin-left: 130px;
     font-family: "Milonga", cursive;
     font-size: 25px; 
 }
-
+/* #loose{
+    font-family: 'Sancreek', cursive;
+    font-size: 55px;
+    color: rgb(255, 150, 12);
+    margin-left: 550px;
+    margin-top:100px;
+} */
 
 /* #coverWin{
     opacity:0;
@@ -297,9 +303,9 @@ margin-left: 130px;
     top:0px;
     left:0px; 
     z-index:1;
-}
-#coverLoose{
-    opacity:0;
+} */
+/* #coverLoose{
+     opacity:0;
     background-image: url("/LooseBackground.png");
     background-size:100%;
     background-repeat: no-repeat;
@@ -308,6 +314,7 @@ margin-left: 130px;
     height:100%;
     top:0px;
     left:0px; 
-    z-index:1;
+    z-index:0; 
 } */
+
 
