@@ -87,8 +87,22 @@ function displayRules(){
     document.getElementById("elements").style.animation = "animateRules 3s ease-in-out forwards";
 }
 
-function battle(user){  
-      if(userScore===5 || computerScore===5 || userPages===3 || dragonWins===3){
+function win(){
+    document.getElementById("coverWin").style.opacity="0.9";
+    document.getElementById("coverWin").style.zIndex="1";
+    document.getElementById("coverWin").style.backgroundImage="url('/winnerPage.jpg')";
+    document.getElementById("coverWin").style.backgroundSize="100%";
+    document.getElementById("coverWin").style.backgroundRepeat="no-repeat";
+    document.getElementById("coverWin").style.position="fixed";
+    document.getElementById("coverWin").style.width="100%";
+   document.getElementById("coverWin").style.height="100%";
+    document.getElementById("coverWin").style.top="0px";
+    document.getElementById("coverWin").style.left="0px";
+    document.getElementById("win").style.display="block";
+}
+function battle(user){ 
+
+    if(userScore===5 || computerScore===5){
           return;
       }
      
@@ -132,6 +146,13 @@ function battle(user){
                 document.getElementById("dragonScoreTxt").innerHTML=computerScore;
                 document.getElementById("winerMiniGame").innerHTML="Dragon wins";
             }
+            else if (userChoice==="Fire" && computerChoice==="Wind"){
+                userScore+=1;
+                computerScore+=1;
+                document.getElementById("userScoreTxt").innerHTML=userScore;
+                document.getElementById("dragonScoreTxt").innerHTML=computerScore;
+                document.getElementById("winerMiniGame").innerHTML="Both Players wins";
+            }  
         }
         else if(userChoice==="Earth"){
             if(userChoice==="Earth" && computerChoice==="Fire"){
@@ -165,11 +186,16 @@ function battle(user){
                 document.getElementById("winerMiniGame").innerHTML="Dragon wins";
             }
         }
-if (userScore===5){
+
+        
+    
+        if (userScore===5){        
+        dragonPages-=1;
+        userPages+=1;
         continueOrQuit("User");
-          return;
+            return;
     }
-    else if(computerScore===5){
+        else if(computerScore===5){
         continueOrQuit("Computer");
         return;
     }
@@ -179,8 +205,6 @@ if (userScore===5){
 function continueOrQuit(winner){
     if(winner==="User"){
         document.getElementById("continueOrQuit").style.opacity="1";
-        dragonPages-=1;
-        userPages+=1;
         document.getElementById("dragonPages").innerHTML=`Pages ${dragonPages}`;
         document.getElementById("userPages").innerHTML=`Pages ${userPages}`;
         document.getElementById("winOrLoose").innerHTML="You win page";
@@ -189,12 +213,14 @@ function continueOrQuit(winner){
         document.getElementById("inventionInfo").innerHTML=stolenpages[0].information;
         document.getElementById( "imgOfInvention").src=stolenpages[0].pictureLocation;
         document.getElementById( "imgOfInvention").alt=stolenpages[0].name;
+    
     }
     
      else if(winner==="Computer"){
          dragonWins+=1;
         document.getElementById("continueOrQuit").style.opacity="1";
         document.getElementById("winOrLoose").innerHTML="You loose";
+        exitGame();
         
      }   
             
@@ -204,6 +230,7 @@ function reloadPage(){
 }
 function continueGame(){
     if(userPages===3){
+        win();
         return
     }
     stolenpages.shift();
@@ -216,18 +243,19 @@ function continueGame(){
     
 
 }
-// function exitGame(){
-//     document.getElementById("gameDiv").style.zIndex="1";
-//     document.getElementById("coverLoose").style.opacity="0.9";
-//     document.getElementById("coverLoose").style.zIndex="1";
-//     document.getElementById("coverLoose").style.backgroundImage.url="/LooseBackground.png";
-//     document.getElementById("coverLoose").style.backgroundSize="100%";
-//     document.getElementById("coverLoose").style.backgroundRepeat="no-repeat";
-//     document.getElementById("coverLoose").style.position="fixed";
-//     document.getElementById("coverLoose").style.width="100%";
-//    document.getElementById("coverLoose").style.height="100%";
-//     document.getElementById("coverLoose").style.top="0px";
-//     document.getElementById("coverLoose").style.left="0px";
+ function exitGame(){
+    document.getElementById("coverLoose").style.opacity="0.9";
+    document.getElementById("coverLoose").style.zIndex="1";
+    document.getElementById("coverLoose").style.backgroundImage="url('LooseBackground.png')";
+    document.getElementById("coverLoose").style.backgroundSize="100%";
+    document.getElementById("coverLoose").style.backgroundRepeat="no-repeat";
+    document.getElementById("coverLoose").style.position="fixed";
+    document.getElementById("coverLoose").style.width="100%";
+   document.getElementById("coverLoose").style.height="100%";
+    document.getElementById("coverLoose").style.top="0px";
+    document.getElementById("coverLoose").style.left="0px";
+    document.getElementById("loose").style.display="block";
 
-// }
+ }
+ 
 
