@@ -9,7 +9,7 @@ class Inventions{
 let arrayOfInventions=[];
 const computerChoiceOfElements=["Water", "Wind","Water", "Fire"];
 let computerScore=0;
-let userScore=4;
+let userScore=0;
 let dragonPages=3;
 let userPages=0;
 let dragonWins=0;
