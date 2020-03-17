@@ -101,23 +101,7 @@ function displayRules(){
     document.getElementById("elements").style.animation = "animateRules 3s ease-in-out forwards";
 }
 
-function win(){ //display win page
-    document.getElementById("reloadWin").style.display="block";
-    document.getElementById("baloon").style.display="block";
-    document.getElementById("aircraft").style.display="block";
-    document.getElementById("air").style.display="block";
-    document.getElementById("coverWin").style.opacity="1";
-    document.getElementById("coverWin").style.zIndex="1";
-    document.getElementById("coverWin").style.backgroundImage="url('/winnerPage.jpg')";
-    document.getElementById("coverWin").style.backgroundSize="100%";
-    document.getElementById("coverWin").style.backgroundRepeat="no-repeat";
-    document.getElementById("coverWin").style.position="fixed";
-    document.getElementById("coverWin").style.width="100%";
-    document.getElementById("coverWin").style.height="100%";
-    document.getElementById("coverWin").style.top="0px";
-    document.getElementById("coverWin").style.left="0px";
-    document.getElementById("win").style.display="block";
-}
+
 
 function battle(user){  //battle function 
 
@@ -245,12 +229,30 @@ function continueGame(){
         return;
     }
     stolenpages.shift();
-    userScore=4;
+    userScore=0;
     computerScore=0;
     document.getElementById("userScoreTxt").innerHTML=userScore;
     document.getElementById("dragonScoreTxt").innerHTML=computerScore;
     document.getElementById("stolenPage").style.animation="animatePagesDis 2s ease-in-out";
     document.getElementById("continueOrQuit").style.opacity="0";
+}
+
+function win(){ //display win page
+    document.getElementById("reloadWin").style.display="block";
+    document.getElementById("baloon").style.display="block";
+    document.getElementById("aircraft").style.display="block";
+    document.getElementById("air").style.display="block";
+    document.getElementById("coverWin").style.opacity="1";
+    document.getElementById("coverWin").style.zIndex="1";
+    document.getElementById("coverWin").style.backgroundImage="url('/winnerPage.jpg')";
+    document.getElementById("coverWin").style.backgroundSize="100%";
+    document.getElementById("coverWin").style.backgroundRepeat="no-repeat";
+    document.getElementById("coverWin").style.position="fixed";
+    document.getElementById("coverWin").style.width="100%";
+    document.getElementById("coverWin").style.height="100%";
+    document.getElementById("coverWin").style.top="0px";
+    document.getElementById("coverWin").style.left="0px";
+    document.getElementById("win").style.display="block";
 }
 
  function exitGame(){ //display exit and loose pages
