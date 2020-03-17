@@ -90,6 +90,7 @@ function displayRules(){
 function win(){
     document.getElementById("baloon").style.display="block";
     document.getElementById("aircraft").style.display="block";
+    document.getElementById("air").style.display="block";
     document.getElementById("coverWin").style.opacity="1";
     document.getElementById("coverWin").style.zIndex="1";
     document.getElementById("coverWin").style.backgroundImage="url('/winnerPage.jpg')";

@@ -389,8 +389,17 @@ margin-left: 130px;
     margin-top: 500px;
     margin-left: 950px;
     opacity: 0;
-    animation: movebaloon 25s ease-in-out infinite;
+    animation: movebaloon 35s ease-in-out infinite;
 
+}
+#air{
+    display:none;
+    width: 250px;
+    height: 250px;
+    margin-top: -300px;
+    margin-left: 1400px;
+    opacity: 1;
+    animation: moveAir 35s ease-in-out infinite;
 }
 #explosion1{
     display:none;
@@ -414,9 +423,19 @@ margin-left: 130px;
     margin-top: -550px;
     margin-left: -500px;
     transform: scale(5);
-    animation: movingAircraft  35s ease-in-out infinite;     
+    animation: movingAircraft  25s ease-in-out infinite;     
 }
+@keyframes
+moveAir{
+    from {
+        transform: translateX(0px) scale(0);
 
+      }
+      to {
+          transform: translateX(-2000px) scale(5);
+
+}
+}
 @keyframes 
 movingAircraft{
     from {
@@ -430,7 +449,7 @@ movingAircraft{
 @keyframes
 movebaloon{
 0%{
-            transform: translateY(0px);
+            transform: translateY(100px);
             opacity: 0;
         }
         10%{
@@ -440,7 +459,7 @@ movebaloon{
             opacity: 1;
         }
         100%{
-            transform: translateY(-700px);
+            transform: translateY(-1000px);
             opacity: 0;
     
         } 
