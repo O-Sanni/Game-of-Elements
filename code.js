@@ -93,7 +93,7 @@ function randomPages(){ //generate three stolen pages randomly and no repeats
 randomPages();
 
 function openGame(){
-    window.open("/index.html");
+    window.open("/game.html");
 }
 
 function displayRules(){
