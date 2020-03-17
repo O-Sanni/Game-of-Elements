@@ -328,7 +328,8 @@ rotateright{
 }
 #winerMiniGame{
     margin-left: 150px;
-    margin-top: -45px;
+    margin-top: -55px;
+    width:200px;
     font-family: "Milonga", cursive;
     font-size: 25px;
 }
