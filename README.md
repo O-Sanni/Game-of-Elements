@@ -21,3 +21,7 @@
     2.https://www.pngwave.com/
     3.https://pixabay.com/
     4.http://www.southperry.net/showthread.php?t=46888&page=7
+
+## Link with information about the inventions
+
+https://interestingengineering.com/35-inventions-that-changed-the-world
