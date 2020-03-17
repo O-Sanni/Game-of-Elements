@@ -348,6 +348,27 @@ rotateright{
 #questionButtons{
     margin-bottom: 50px;
     margin-left: 130px;
+    font-family: "Milonga", cursive;
+    font-size: 15px; 
+}
+#reloadWin{
+    display: none;
+    margin-left: 630px;
+    margin-top: -50px;
+    background-color: rgb(22, 218, 218);
+    font-family: "Milonga", cursive;
+    font-size: 15px; 
+}
+.buttonsQ{
+    font-family: "Milonga", cursive;
+    font-size: 15px; 
+}
+#reloadLoose{
+    display: none;
+    margin-left: 100px;
+    background-color: rgb(255, 150, 12);
+    font-family: "Milonga", cursive;
+    font-size: 15px; 
 }
 #question{
     margin-top: -5px;

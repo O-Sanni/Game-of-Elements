@@ -9,7 +9,7 @@ class Inventions{
 let arrayOfInventions=[];
 const computerChoiceOfElements=["Water", "Wind","Water", "Fire"];
 let computerScore=0;
-let userScore=0;
+let userScore=4;
 let dragonPages=3;
 let userPages=0;
 let dragonWins=0;
@@ -101,7 +101,8 @@ function displayRules(){
     document.getElementById("elements").style.animation = "animateRules 3s ease-in-out forwards";
 }
 
-function win(){ //display win page 
+function win(){ //display win page
+    document.getElementById("reloadWin").style.display="block";
     document.getElementById("baloon").style.display="block";
     document.getElementById("aircraft").style.display="block";
     document.getElementById("air").style.display="block";
@@ -253,9 +254,10 @@ function continueGame(){
 }
 
  function exitGame(){ //display exit and loose pages
-    document.getElementById("coverLoose").style.opacity="1";
+    document.getElementById("reloadLoose").style.display="block";
     document.getElementById("explosion1").style.display="block";
     document.getElementById("explosion2").style.display="block";
+    document.getElementById("coverLoose").style.opacity="1";
     document.getElementById("coverLoose").style.zIndex="1";
     document.getElementById("coverLoose").style.backgroundImage="url('LooseBackground.png')";
     document.getElementById("coverLoose").style.backgroundSize="100%";
