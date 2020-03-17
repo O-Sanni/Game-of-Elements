@@ -1,81 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Black+And+White+Picture|Diplomata+SC|Kenia|MedievalSharp|Milonga|Miltonian+Tattoo|New+Rocker|Passero+One|Rye|Sancreek&display=swap" rel="stylesheet">
-     <title>Game</title>
+   <link rel="stylesheet" type="text/css" href="styles.css">
+   <link href="https://fonts.googleapis.com/css?family=Milonga|Rye|Sancreek&display=swap" rel="stylesheet">
+    <title>Welcome</title>
 </head>
-<body id="gamePageBody">
-    <div id="coverLoose">
-        <h1 id="loose">YOU LOOSE !</h>
-            <button id="reloadLoose" type="button" onclick="reloadPage()">Restart</button>
-        <img id="explosion1" src="/assets/explosion.png">
-        <img id="explosion2" src="/assets/explosion.png">
+<body id="bodyWelcome"> 
+    <img id="airCraft" src="/assets/flyingship1.png" alt="flying ship">
+    <div id="gears">
+        <img id="gear1" src="/assets/gear.png" alt="gear">
+        <img id="gear2" src="/assets/gear.png" alt="gear">
+        <img id="gear3" src="/assets/gear.png" alt="gear">
     </div>
-    <div id="coverWin">
-        <p id="win">YOU WIN !</p>
-        <button id="reloadWin" type="button" onclick="reloadPage()">Restart</button>
-        <img id="baloon" src="/assets/baloon.png" alt="baloon">
-        <img id="aircraft" src="/assets/flying.png" alt="flying">
-        <img id="air" src="/assets/flying3.png" alt="flying aircraft">
-    </div>
-    <div id="gamePageTopDiv">
-        <div id="userSide">
-            <p id="userName">GUARDIAN</p>
-            <div id="charElemPageUser">
-                <img id="rabbitGame" src="/rabbit.png" alt="Rabbit">
-                    <div id="elementsUser">
-                        <img class="elementsImg" src="/assets/elements/FireWhite.gif" onclick="battle('Fire');" alt="Fire">
-                        <img class="elementsImg" src="/assets/elements/WaterWhite.gif" onclick="battle('Water');" alt="Water">
-                        <img class="elementsImg" src="/assets/elements/EarthWhite.gif" onclick="battle('Earth');" alt="Earth">
-                        <img class="elementsImg" src="/assets/elements/WindWhite.gif" onclick="battle('Wind');" alt="Wind">
-                    </div>
-                <p id="userPages"></p>
+    <div id="mainContainer">
+        <h1 id="welcome"> WELCOME GUARDIAN ! </h1>
+        <div id="mainPageButtonsDiv">
+            <button type="button" onclick="openGame()">Start Game</button>
+            <button type="button" onclick="displayRules()">Rules and Story</button>
+        </div> 
+        <div id="middleMainDiv">
+            <div id="rabbitMain">
+                <img id="rabbitMainImg" src="/rabbit.png" alt="dragon">
             </div>
-            <div id="userScore"></div>
-            <p id="userScoreTxt"></p>
+        <div id="storyandRulesDiv"> 
+            <p id="rules"> 
+                Your role is protecting the history from the evil dragon who wants to change the flow of the history and destroy the present. 
+                During the storm the dragon was lucky, and he stole three pages from the book which stored the history of the inventions that changed the history.If you would not return them, the history would be change forever. In order to return those pages, you need to play a simple game. The name of the game is "Elements."You have four elements of nature in your possession, and the dragon has the same set of elements.
+                Those elements are: earth, wind, water and fire. You need to choose an element, and the dragon will choose an element. Those elements would fight and would either loose or win. 
+                The winner would be the one who would gain 5 winning points. In order to win a game, you need to win all three game to get all the pages back. After each game you would be asked if you want to continue.
+
+                Here the rules of how the winning points could be gained:
+                Fire and Wind are working together, so if you have this combination both of you will gain a point.
+                Water and Fire, water will put dow the fire, and one point would added to the player who chooses water.
+                Earth and Water, earth would make a water dirty, one point would be added to the player who chooses earth.
+                Wind and Water, wind will spread around water and make it weak, one point would be added to player who chooses wind.
+                Fire and Earth, fire would dry out earth, one point will be added to player who chooses fire.
+                In all other cases points would not be added.
+            </p>
+        <img id ="elements" src="/elements_steampunk-removebg-preview.png" alt="Elements">
         </div>
-        <div id="scoresPagesChoices">
-            <div id="choices">
-                <img class="choiceClass" id="userChoice" src="" alt="Player's choice">
-                <img class="choiceClass" id="dragonChoice" src="" alt="Dragon's choice">
-                <p id="winerMiniGame"></p>
-            </div>
-            <div id="continueOrQuit">
-                <p id="winOrLoose"></p>
-                <p id="question">Would you like to continue?</p>
-                <div id="questionButtons">
-                    <button class="buttonsQ" type="button" onclick="exitGame()">Exit</button>
-                    <button class="buttonsQ" type="button" onclick="reloadPage()">Restart</button>
-                    <button class="buttonsQ" type="button" onclick="continueGame()">Continue</button>   
-                </div>
-            </div>
+        <div id="dragonMain">
+            <img id="dragonMainImg" src="dragon.png" alt="dragon">
         </div>
-        <div id="dragonSide">
-            <p id="dragonName">DRAGON</p>
-            <div id="charElemPageDragon">
-                <img id="dragonGame" src="/dragon.png" alt="Dragon">
-                <div id="elementsDragon">
-                    <img class="elementsImgDragon" src="/assets/elements/FireWhite.gif"  alt="Fire">
-                    <img class="elementsImgDragon" src="/assets/elements/WaterWhite.gif"  alt="Water">
-                    <img class="elementsImgDragon" src="/assets/elements/EarthWhite.gif" alt="Earth">
-                    <img class="elementsImgDragon" src="/assets/elements/WindWhite.gif" alt="Wind">
-                </div>
-                <p id="dragonPages"></p>
-                    <div id="dragonScore"></div>  
-                    <p id="dragonScoreTxt"></p>  
-            </div>
-        </div>
-    </div>
-    <div id="bottomGamePage">
-        <div id="stolenPage">
-            <div id="stolenInvDiv">
-                <img id="imgOfInvention" src="" alt="">
-                <div id="inventionInfoDiv">
-                    <h1 id="inventionName"></h1>
-                    <p id="inventionInfo"></p>
-                </div>
-            </div>
         </div>
     </div>
     <script src="/code.js"></script>

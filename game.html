@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Black+And+White+Picture|Diplomata+SC|Kenia|MedievalSharp|Milonga|Miltonian+Tattoo|New+Rocker|Passero+One|Rye|Sancreek&display=swap" rel="stylesheet">
+     <title>Game</title>
+</head>
+<body id="gamePageBody">
+    <div id="coverLoose">
+        <h1 id="loose">YOU LOOSE !</h>
+            <button id="reloadLoose" type="button" onclick="reloadPage()">Restart</button>
+        <img id="explosion1" src="/assets/explosion.png">
+        <img id="explosion2" src="/assets/explosion.png">
+    </div>
+    <div id="coverWin">
+        <p id="win">YOU WIN !</p>
+        <button id="reloadWin" type="button" onclick="reloadPage()">Restart</button>
+        <img id="baloon" src="/assets/baloon.png" alt="baloon">
+        <img id="aircraft" src="/assets/flying.png" alt="flying">
+        <img id="air" src="/assets/flying3.png" alt="flying aircraft">
+    </div>
+    <div id="gamePageTopDiv">
+        <div id="userSide">
+            <p id="userName">GUARDIAN</p>
+            <div id="charElemPageUser">
+                <img id="rabbitGame" src="/rabbit.png" alt="Rabbit">
+                    <div id="elementsUser">
+                        <img class="elementsImg" src="/assets/elements/FireWhite.gif" onclick="battle('Fire');" alt="Fire">
+                        <img class="elementsImg" src="/assets/elements/WaterWhite.gif" onclick="battle('Water');" alt="Water">
+                        <img class="elementsImg" src="/assets/elements/EarthWhite.gif" onclick="battle('Earth');" alt="Earth">
+                        <img class="elementsImg" src="/assets/elements/WindWhite.gif" onclick="battle('Wind');" alt="Wind">
+                    </div>
+                <p id="userPages"></p>
+            </div>
+            <div id="userScore"></div>
+            <p id="userScoreTxt"></p>
+        </div>
+        <div id="scoresPagesChoices">
+            <div id="choices">
+                <img class="choiceClass" id="userChoice" src="" alt="Player's choice">
+                <img class="choiceClass" id="dragonChoice" src="" alt="Dragon's choice">
+                <p id="winerMiniGame"></p>
+            </div>
+            <div id="continueOrQuit">
+                <p id="winOrLoose"></p>
+                <p id="question">Would you like to continue?</p>
+                <div id="questionButtons">
+                    <button class="buttonsQ" type="button" onclick="exitGame()">Exit</button>
+                    <button class="buttonsQ" type="button" onclick="reloadPage()">Restart</button>
+                    <button class="buttonsQ" type="button" onclick="continueGame()">Continue</button>   
+                </div>
+            </div>
+        </div>
+        <div id="dragonSide">
+            <p id="dragonName">DRAGON</p>
+            <div id="charElemPageDragon">
+                <img id="dragonGame" src="/dragon.png" alt="Dragon">
+                <div id="elementsDragon">
+                    <img class="elementsImgDragon" src="/assets/elements/FireWhite.gif"  alt="Fire">
+                    <img class="elementsImgDragon" src="/assets/elements/WaterWhite.gif"  alt="Water">
+                    <img class="elementsImgDragon" src="/assets/elements/EarthWhite.gif" alt="Earth">
+                    <img class="elementsImgDragon" src="/assets/elements/WindWhite.gif" alt="Wind">
+                </div>
+                <p id="dragonPages"></p>
+                    <div id="dragonScore"></div>  
+                    <p id="dragonScoreTxt"></p>  
+            </div>
+        </div>
+    </div>
+    <div id="bottomGamePage">
+        <div id="stolenPage">
+            <div id="stolenInvDiv">
+                <img id="imgOfInvention" src="" alt="">
+                <div id="inventionInfoDiv">
+                    <h1 id="inventionName"></h1>
+                    <p id="inventionInfo"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/code.js"></script>
+</body>
+</html>
