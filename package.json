@@ -1,0 +1,19 @@
+{
+  "name": "game-of-elements",
+  "version": "1.0.0",
+  "description": "Player's role is protecting the history from the evil dragon who wants to change the flow of the history and destroy the present. \r     During the storm the dragon was lucky, and he stole three pages from the book which stored the history of the inventions that changed the history.If you would not return them, the history would be change forever. In order to return those pages, you need to play a simple game. The name of the game is \"Elements.\"You have four elements of nature in your possession, and the dragon has the same set of elements.\r     Those elements are: earth, wind, water and fire. You need to choose an element, and the dragon will choose an element. Those elements would fight and would either loose or win. \r     The winner would be the one who would gain 5 winning points. In order to win a game, you need to win all three game to get all the pages back. After each game you would be asked if you want to continue.",
+  "main": "code.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/O-Sanni/Game-of-Elements.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/O-Sanni/Game-of-Elements/issues"
+  },
+  "homepage": "https://github.com/O-Sanni/Game-of-Elements#readme"
+}
